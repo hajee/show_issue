@@ -1,0 +1,10 @@
+<div>
+  before value is: <%= rand(1000) %>
+</div>
+<turbo-frame id="my-id" ">
+  <a href="#" data-turbo-command="TestCommand#test" data-turbo-frame="my-id">refresh</a>
+  test value is: <%= @test_value || 0 %>
+</turbo-frame>
+<div>
+  after value is: <%= rand(1000) %>
+</div>
