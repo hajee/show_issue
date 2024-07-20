@@ -2,8 +2,12 @@
   before value is: <%= rand(1000) %>
 </div>
 <turbo-frame id="my-id" ">
-  <a href="#" data-turbo-command="TestCommand#test" data-turbo-frame="my-id">refresh</a>
-  test value is: <%= @test_value || 0 %>
+  <a href="#" data-turbo-command="TestCommand#test" data-turbo-frame="my-id">command</a>
+  test value is: <%= @test_value || 0 %></br>
+</turbo-frame>
+<turbo-frame id="my-id-2" ">
+  <a href="<%= root_path %>">turbo link</a>
+  test value is: <%= @test_value || 0 %></br>
 </turbo-frame>
 <div>
   after value is: <%= rand(1000) %>
